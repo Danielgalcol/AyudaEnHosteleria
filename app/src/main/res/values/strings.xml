@@ -1,0 +1,21 @@
+<resources>
+    <string name="correo">Correo</string>
+    <string name="contra">Contraseña</string>
+    <string name="AceptarLogin">Aceptar</string>
+    <string name="AtrasLogin">Atrás</string>
+    <string name="inicio">Iniciar Sesión</string>
+    <string name="registro">Registrarse</string>
+    <string name="cosa">Si eres nuevo usuario se te dan 100€.</string>
+    <string name="regis">Bienvenido, aquí podrás registrarte sin problemas.</string>
+    <string name="AtrasRegis">Atrás</string>
+    <string name="CerrarSesion">Cerrar Sesión</string>
+    <string name="ini">Inicio</string>
+    <string name="Nosotros">Perfil</string>
+    <string name="hola">hola</string>
+    <string name="app_name">Mi app</string>
+    <string name="hello_blank_fragment">Hola </string>
+    <string name="hello_blank_fragment2">Perfil</string>
+    <string name="Comanda">Comandas</string>
+    <string name="Historial">Historial</string>
+    <string name="hC">Historial de Comandas</string>
+</resources>

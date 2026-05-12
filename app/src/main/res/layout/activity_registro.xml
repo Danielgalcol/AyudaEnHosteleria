@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="24dp"
+    tools:context=".Registro">
+
+    <!-- TÍTULO -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/regis"
+        android:textColor="#212121"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tCorreo"
+        android:layout_marginTop="48dp" />
+
+    <!-- LABEL CORREO -->
+    <TextView
+        android:id="@+id/tCorreo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/correo"
+        android:textSize="16sp"
+        android:textColor="#212121"
+        android:textStyle="bold"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/eTCorreo" />
+
+    <!-- CAMPO CORREO -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/eTCorreo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/correo"
+        android:layout_marginTop="148dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- LABEL CONTRASEÑA -->
+    <TextView
+        android:id="@+id/tContra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/contra"
+        android:textSize="16sp"
+        android:textColor="#212121"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/eTCorreo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- CAMPO CONTRASEÑA 1 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/eContra1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/contra"
+        android:layout_marginTop="8dp"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/tContra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/imageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- LABEL CONFIRMAR CONTRASEÑA -->
+    <TextView
+        android:id="@+id/tContra3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/contra"
+        android:textSize="16sp"
+        android:textColor="#212121"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/eContra1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- CAMPO CONTRASEÑA 2 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/eContra2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/contra"
+        android:layout_marginTop="8dp"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/tContra3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/imageButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- BOTÓN ATRÁS -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bAtrasRegis"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/AtrasRegis"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/eContra2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bAcepRegis" />
+
+    <!-- BOTÓN ACEPTAR -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bAcepRegis"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/AceptarLogin"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/eContra2"
+        app:layout_constraintStart_toEndOf="@+id/bAtrasRegis"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

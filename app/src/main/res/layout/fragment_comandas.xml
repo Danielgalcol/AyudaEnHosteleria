@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ComandasFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#F5F5F5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- TÍTULO -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="16dp"
+                    android:text="Nueva Comanda"
+                    android:textColor="#212121"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- NÚMERO DE MESA -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilMesa"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Número de Mesa">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMesa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- LISTA DE PLATOS -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:text="Platos"
+                    android:textColor="#212121"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- PLATO 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ensalada César"
+                                android:textColor="#212121"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8,50 €"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnMenos1"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_red"
+                            android:contentDescription="Quitar" />
+
+                        <TextView
+                            android:id="@+id/tvCantidad1"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#212121"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/btnMas1"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_green"
+                            android:contentDescription="Añadir" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- PLATO 2 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Espaguetis a la carbonara"
+                                android:textColor="#212121"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8,50 €"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnMenos2"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_red"
+                            android:contentDescription="Quitar" />
+
+                        <TextView
+                            android:id="@+id/tvCantidad2"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#212121"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/btnMas2"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_green"
+                            android:contentDescription="Añadir" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- PLATO 3 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Paella Valenciana"
+                                android:textColor="#212121"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="14,00 €"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnMenos3"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_red"
+                            android:contentDescription="Quitar" />
+
+                        <TextView
+                            android:id="@+id/tvCantidad3"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#212121"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/btnMas3"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_green"
+                            android:contentDescription="Añadir" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- PLATO 4 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chuletón a la brasa"
+                                android:textColor="#212121"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="22,00 €"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnMenos4"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_red"
+                            android:contentDescription="Quitar" />
+
+                        <TextView
+                            android:id="@+id/tvCantidad4"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#212121"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/btnMas4"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_green"
+                            android:contentDescription="Añadir" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- PLATO 5 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Secreto Ibérico"
+                                android:textColor="#212121"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="25,00 €"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnMenos5"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_red"
+                            android:contentDescription="Quitar" />
+
+                        <TextView
+                            android:id="@+id/tvCantidad5"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#212121"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/btnMas5"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_green"
+                            android:contentDescription="Añadir" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- PLATO 6-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tarta de queso"
+                                android:textColor="#212121"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5,50 €"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnMenos6"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_red"
+                            android:contentDescription="Quitar" />
+
+                        <TextView
+                            android:id="@+id/tvCantidad6"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#212121"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/btnMas6"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_green"
+                            android:contentDescription="Añadir" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--PLATO 7-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tarta de trufas"
+                                android:textColor="#212121"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="6,50 €"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnMenos7"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_red"
+                            android:contentDescription="Quitar" />
+
+                        <TextView
+                            android:id="@+id/tvCantidad7"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#212121"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/btnMas7"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_green"
+                            android:contentDescription="Añadir" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--BEBIDA 1-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Radler"
+                                android:textColor="#212121"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2,50 €"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnMenos8"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_red"
+                            android:contentDescription="Quitar" />
+
+                        <TextView
+                            android:id="@+id/tvCantidad8"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#212121"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/btnMas8"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_green"
+                            android:contentDescription="Añadir" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--BEBIDA 2-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Agua"
+                                android:textColor="#212121"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3,00 €"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnMenos9"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_red"
+                            android:contentDescription="Quitar" />
+
+                        <TextView
+                            android:id="@+id/tvCantidad9"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#212121"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/btnMas9"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_green"
+                            android:contentDescription="Añadir" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--BEBIDA 3-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Coca Cola"
+                                android:textColor="#212121"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2,80 €"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnMenos10"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_red"
+                            android:contentDescription="Quitar" />
+
+                        <TextView
+                            android:id="@+id/tvCantidad10"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#212121"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/btnMas10"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_green"
+                            android:contentDescription="Añadir" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--BEBIDA 4-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Fanta Naranja"
+                                android:textColor="#212121"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2,80 €"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnMenos11"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_red"
+                            android:contentDescription="Quitar" />
+
+                        <TextView
+                            android:id="@+id/tvCantidad11"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#212121"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/btnMas11"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_green"
+                            android:contentDescription="Añadir" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--BEBIDA 5-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Fanta Limón"
+                                android:textColor="#212121"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2,80 €"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnMenos12"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_red"
+                            android:contentDescription="Quitar" />
+
+                        <TextView
+                            android:id="@+id/tvCantidad12"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#212121"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/btnMas12"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_green"
+                            android:contentDescription="Añadir" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--BEBIDA 13-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nestea"
+                                android:textColor="#212121"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2,80 €"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnMenos13"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_red"
+                            android:contentDescription="Quitar" />
+
+                        <TextView
+                            android:id="@+id/tvCantidad13"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#212121"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/btnMas13"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_button_green"
+                            android:contentDescription="Añadir" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- ALERGIAS -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:text="Alergias"
+                    android:textColor="#212121"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbGluten"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Gluten" />
+
+                    <CheckBox
+                        android:id="@+id/cbLactosa"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Lactosa" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbFrutosSec"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Frutos secos" />
+
+                    <CheckBox
+                        android:id="@+id/cbMariscos"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Mariscos" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbHuevo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Huevo" />
+
+                    <CheckBox
+                        android:id="@+id/cbSoja"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Soja" />
+                </LinearLayout>
+
+                <!-- PRECIO TOTAL -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="#212121"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TOTAL"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvPrecioTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0,00 €"
+                            android:textColor="#4CAF50"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- BOTON CREAR COMANDA -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCrearComanda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp"
+                    android:text="Crear Comanda"
+                    android:textSize="16sp"
+                    app:cornerRadius="8dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>
